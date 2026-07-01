@@ -33,7 +33,7 @@ nav{background:var(--cream);border-bottom:1px solid var(--border);padding:0 48px
 .nav-links a{font-size:14px;font-weight:500;color:var(--text-muted);text-decoration:none;transition:color .2s}
 .nav-links a:hover{color:var(--dark-green)}
 .btn-nav{background:var(--dark-green);color:var(--white);padding:10px 22px;border-radius:100px;font-size:13px;font-weight:600;text-decoration:none;transition:opacity .2s}
-.btn-nav:hover{opacity:.88}
+.btn-nav:hover{opacity:.88;color:var(--white)}
 
 /* ── HERO ────────────────────────────────────────────────────────────────── */
 .hero{padding:72px 48px 80px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;max-width:1200px;margin:0 auto}
@@ -245,6 +245,7 @@ footer{background:var(--dark-green);padding:48px;color:rgba(255,255,255,.85)}
 <!-- ── NAV ──────────────────────────────────────────────────────────────── -->
 <nav>
   <div class="nav-brand">
+    <a href="#" style="text-decoration:none;display:flex;align-items:center" aria-label="Back to top">
     <div class="nav-logo">
       <svg viewBox="30 18 210 248" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M37.1415 59.4978L76.719 59.5035C82.4125 59.5043 91.8202 59.2005 97.2175 59.6258C98.4942 60.8295 98.2815 63.977 95.294 64.0755C77.0995 64.6753 82.0242 74.9693 86.7592 86.4195C89.0775 91.929 91.352 97.4565 93.583 103.002L117.962 163.223C122 173.384 126.11 183.389 129.587 193.758C132.332 186.108 134.598 179.566 138.224 172.294C140.457 167.817 142.046 158.543 142.277 153.378C142.727 151.729 142.714 144.068 142.732 142.04C142.758 141.084 142.672 139.788 143.172 139.032C143.4 141.01 143.936 146.977 144.38 148.672C144.691 151.139 144.611 155.887 144.317 158.419C144.217 159.284 143.687 160.702 143.506 161.981L143.73 162.215C144.406 161.812 148.967 152.899 149.668 151.62C160.344 132.152 170.846 112.338 177.684 91.141C178.564 88.413 180.134 83.7203 180.497 80.9675L180.753 80.2713C182.334 79.6785 182.166 79.5128 182.592 78.0663L183.171 78.3963L183.655 78.0398C183.631 79.5783 183.353 79.8228 184.094 80.9918L184.011 81.2403C183.372 83.1965 182.882 85.841 182.327 87.9483C181.273 91.9085 180.096 95.835 178.797 99.722C175.704 109.075 171.772 117.674 168.035 126.746C171.163 123.659 185.055 110.469 188.585 109.294C191.857 108.699 200.477 99.6833 203.038 96.839L203.528 97.0865C201.729 98.9523 200.081 100.952 198.29 102.819C195.715 105.501 193.16 107.865 190.909 110.844C181.719 117.919 171.052 126.26 164.265 135.762C160.611 140.877 155.805 150.133 152.974 155.818C150.676 160.433 146.627 168.167 144.904 172.918C151.87 164.992 155.103 162.665 164.979 158.784C167.02 158.947 170.693 158.047 172.807 157.579L173.48 158.117C170.698 158.994 167.455 159.724 165.271 161.575C162.218 163.029 158.837 164.57 156.085 166.525C144.202 174.963 137.778 187.106 133.113 200.504C130.765 207.247 128.588 214.382 127.778 221.456C127.296 225.664 127.106 230.516 126.848 234.765C129.194 230.158 132.559 225.989 137.018 223.271L137.967 222.907C138.121 223.192 138.427 223.798 138.592 224.039C138.138 224.511 137.854 224.751 137.55 225.341C125.164 236.996 127.815 242.788 126.457 257.428C124.606 257.543 122.196 258.078 122.122 255.61C122.059 253.513 122.195 251.6 122.322 249.492C122.637 244.24 123.052 238.926 122.332 233.687C120.749 225.753 116.408 216.54 113.269 209.039L102.549 183.15L71.0542 107.533C66.9575 97.911 62.9222 88.2175 58.75 78.6785C55.2032 70.5693 49.629 64.8843 40.4797 64.1108C39.2292 64.005 37.9157 64.2983 36.9272 63.5755C36.2402 62.2538 36.769 60.9013 37.1415 59.4978Z" fill="#29523B"/>
@@ -256,9 +257,10 @@ footer{background:var(--dark-green);padding:48px;color:rgba(255,255,255,.85)}
       </svg>
       <span class="nav-wordmark">venaya</span>
     </div>
+    </a>
   </div>
   <div class="nav-links">
-    <a href="#waitlist" class="btn-nav">Join Waitlist</a>
+    <a href="#waitlist" class="btn-nav" onclick="resetForm()">Join Waitlist</a>
   </div>
 </nav>
 
@@ -370,7 +372,7 @@ footer{background:var(--dark-green);padding:48px;color:rgba(255,255,255,.85)}
     <div class="wl-header">
       <div class="wl-badge">Join the Waitlist</div>
       <h2 class="wl-h2">Help us build<br><em>the right thing</em></h2>
-      <p class="wl-sub">Three quick questions. Your answers shape what we build first.</p>
+      <p class="wl-sub">Four quick questions. Your answers shape what we build first.</p>
     </div>
 
     <div class="steps">
@@ -485,6 +487,21 @@ footer{background:var(--dark-green);padding:48px;color:rgba(255,255,255,.85)}
 </footer>
 
 <script>
+function resetForm(){
+  const success = document.getElementById('success-state');
+  if(success.style.display === 'block'){
+    success.style.display = 'none';
+    document.querySelector('.steps').style.display = '';
+    document.getElementById('email-capture').style.display = '';
+    document.querySelector('.ec-input[type="email"]').value = '';
+    document.querySelector('.ec-input[type="text"]').value = '';
+    document.querySelector('.ec-btn').textContent = 'Secure my spot →';
+    document.querySelector('.ec-btn').disabled = false;
+    document.querySelectorAll('.ls-opt').forEach(o => o.classList.remove('sel'));
+    document.querySelectorAll('.yn-large button').forEach(b => b.classList.remove('sel'));
+    document.querySelector('.step-textarea').value = '';
+  }
+}
 function toggleSel(el){
   el.closest('.ls-selector').querySelectorAll('.ls-opt').forEach(o=>o.classList.remove('sel'));
   el.classList.add('sel');
